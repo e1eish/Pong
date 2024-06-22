@@ -34,4 +34,17 @@ public class Ball : MonoBehaviour
         UnityEngine.Vector2 direction = new UnityEngine.Vector2(x, y);
         _rigidbody.AddForce(direction * speed);
     }
+
+    public void AddForce(UnityEngine.Vector2 force)
+    {
+        _rigidbody.AddForce(force);
+    }
+
+    public void ResetPosition()
+    {
+        _rigidbody.position = UnityEngine.Vector3.zero;
+        _rigidbody.velocity = UnityEngine.Vector3.zero;
+
+        AddStartingForce();
+    }
 }
