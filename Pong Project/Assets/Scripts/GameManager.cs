@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
+    public Ball ball;
     private int _playerScore;
     private int _computerScore;
     
@@ -22,10 +23,14 @@ public class GameManager : MonoBehaviour
     public void PlayerScores()
     {
         _playerScore++;
+        Debug.Log(_playerScore);
+        ball.ResetPosition();
     }
 
     public void ComputerScores()
     {
         _computerScore++;
+        Debug.Log(_computerScore);
+        ball.ResetPosition();
     }
 }

@@ -17,13 +17,21 @@ public class Ball : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        AddStartingForce();
+        ResetPosition();
     }
 
     // Update is called once per frame
     void Update()
     {
         
+    }
+
+    public void ResetPosition()
+    {
+        _rigidbody.position = UnityEngine.Vector3.zero;
+        _rigidbody.velocity = UnityEngine.Vector3.zero;
+
+        AddStartingForce();
     }
 
     private void AddStartingForce()
@@ -40,11 +48,4 @@ public class Ball : MonoBehaviour
         _rigidbody.AddForce(force);
     }
 
-    public void ResetPosition()
-    {
-        _rigidbody.position = UnityEngine.Vector3.zero;
-        _rigidbody.velocity = UnityEngine.Vector3.zero;
-
-        AddStartingForce();
-    }
 }
