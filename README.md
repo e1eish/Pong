@@ -6,7 +6,7 @@ This is a recreation of the game Pong in Unity. Use w and d or the arrow keys to
 
 This project was meant to help learn Unity and get into working with game engines.
 
-[Software Demo Video](http://youtube.link.goes.here)
+[Software Demo Video](https://youtu.be/Ovky-SC2nxA)
 
 # Development Environment
 
