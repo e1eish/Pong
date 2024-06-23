@@ -18,6 +18,7 @@ public class Ball : MonoBehaviour
     void Start()
     {
         ResetPosition();
+        AddStartingForce();
     }
 
     // Update is called once per frame
@@ -30,11 +31,9 @@ public class Ball : MonoBehaviour
     {
         _rigidbody.position = UnityEngine.Vector3.zero;
         _rigidbody.velocity = UnityEngine.Vector3.zero;
-
-        AddStartingForce();
     }
 
-    private void AddStartingForce()
+    public void AddStartingForce()
     {
         float x = Random.value < 0.5f ? -1.0f : 1.0f;
         float y = Random.value < 0.5f ? Random.Range(-1.0f, -0.5f) : Random.Range(0.5f, 1.0f);

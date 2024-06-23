@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Numerics;
 using UnityEngine;
 
 public class Paddle : MonoBehaviour
@@ -23,5 +24,11 @@ public class Paddle : MonoBehaviour
     void Update()
     {
         
+    }
+
+    public void ResetPosition()
+    {
+        _rigidbody.position = new UnityEngine.Vector2(_rigidbody.position.x, 0.0f);
+        _rigidbody.velocity = UnityEngine.Vector2.zero;
     }
 }

@@ -1,10 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
     public Ball ball;
+    public Paddle playerPaddle;
+    public Paddle computerPaddle;
+    public Text playerScoreText;
+    public Text computerScoreText;
     private int _playerScore;
     private int _computerScore;
     
@@ -23,14 +28,22 @@ public class GameManager : MonoBehaviour
     public void PlayerScores()
     {
         _playerScore++;
-        Debug.Log(_playerScore);
-        ball.ResetPosition();
+        playerScoreText.text = _playerScore.ToString();
+        ResetRound();
     }
 
     public void ComputerScores()
     {
         _computerScore++;
-        Debug.Log(_computerScore);
+        computerScoreText.text = _computerScore.ToString();
+        ResetRound();
+    }
+
+    private void ResetRound()
+    {
+        playerPaddle.ResetPosition();
+        computerPaddle.ResetPosition();
         ball.ResetPosition();
+        ball.AddStartingForce();
     }
 }
