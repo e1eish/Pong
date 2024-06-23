@@ -1,6 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
-using System.Numerics;
 using UnityEngine;
 
 public class Paddle : MonoBehaviour
@@ -11,24 +8,13 @@ public class Paddle : MonoBehaviour
 
     private void Awake()
     {
+        // Must use to access the Rigidbody2D component of the paddle
         _rigidbody = GetComponent<Rigidbody2D>();
-    }
-    
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 
     public void ResetPosition()
     {
-        _rigidbody.position = new UnityEngine.Vector2(_rigidbody.position.x, 0.0f);
-        _rigidbody.velocity = UnityEngine.Vector2.zero;
+        _rigidbody.position = new Vector2(_rigidbody.position.x, 0.0f);
+        _rigidbody.velocity = Vector2.zero;
     }
 }

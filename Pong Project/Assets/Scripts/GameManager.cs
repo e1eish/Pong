@@ -1,10 +1,9 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
+    // These game objects are connected in the Unity editor
     public Ball ball;
     public Paddle playerPaddle;
     public Paddle computerPaddle;
@@ -12,18 +11,6 @@ public class GameManager : MonoBehaviour
     public Text computerScoreText;
     private int _playerScore;
     private int _computerScore;
-    
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 
     public void PlayerScores()
     {
